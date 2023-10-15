@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  
-  runApp(MaterialApp (
-    theme: ThemeData( 
-      brightness: Brightness.dark,
-      primaryColor:  Colors.indigo
-    ),
-    home: Scaffold(
-      appBar: AppBar( 
-        title: const Text('Apple Bar'),
-      ),
-      body: const Center(
-        child: Text('Hello World'),
-      ),
-    
-    )
-  ));
+  runApp (MaterialApp(home: MyApp()));
+}
+
+class MyApp extends StatelessWidget{
+  @override
+    Widget build(BuildContext context){
+      return Scaffold(
+          appBar: AppBar(
+            title: const Text('Hello World'),
+          ),
+          body: const Center(
+            child: Text('Welcome to this planet')
+          )
+      );
+    }
 }
