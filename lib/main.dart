@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 
-const name = "Marianka";
-
 void main(){
-  runApp (const Center(
-    child: Text('Hello $name! My first apples!',
-    textDirection:TextDirection.ltr,
-    style: TextStyle(
-      fontWeight:FontWeight.bold,
-      fontSize: 40,
-      color: Colors.blueAccent,
-    ) )
+  
+  runApp(MaterialApp (
+    theme: ThemeData( 
+      brightness: Brightness.dark,
+      primaryColor:  Colors.indigo
+    ),
+    home: Scaffold(
+      appBar: AppBar( 
+        title: const Text('Apple Bar'),
+      ),
+      body: const Center(
+        child: Text('Hello World'),
+      ),
+    
+    )
   ));
 }
