@@ -1,19 +1,29 @@
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp (MaterialApp(home: MyApp()));
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: UserButton()
+        ),
+      ),
+    ),
+  );
 }
 
-class MyApp extends StatelessWidget{
+class UserButton extends StatelessWidget {
   @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          appBar: AppBar(
-            title: const Text('Hello World'),
-          ),
-          body: const Center(
-            child: Text('Welcome to this planet')
-          )
-      );
-    }
+  Widget build(BuildContext context){
+    return GestureDetector(
+      onTap: (){
+        //what will happen after a user taps
+        // onTap child widget inside of GestureDetector
+        //what should happen
+        print('User button was tapped');
+      },
+      child: Center(child: Text('Click here!')
+      )
+    );
+  }
 }
