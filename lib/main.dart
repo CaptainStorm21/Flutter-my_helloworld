@@ -20,10 +20,22 @@ class UserButton extends StatelessWidget {
         //what will happen after a user taps
         // onTap child widget inside of GestureDetector
         //what should happen
-        print('User button was tapped');
+        print('Hello world');
       },
-      child: Center(child: Text('Click here!')
-      )
+      child: Container(
+        height: 60,
+        padding: const EdgeInsets.all(8.0),
+        margin: const EdgeInsets.symmetric(horizontal: 9.0),
+
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(6.0),
+          color: Colors.amber[300],
+        ),
+
+
+        child: const Center(child: Text('CLICK HERE'),
+        )
+      ),
     );
   }
 }
